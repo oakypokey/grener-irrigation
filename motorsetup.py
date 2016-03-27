@@ -17,10 +17,10 @@ enable_b = 22
 
 # Enable pins for IN1-4 to control step sequence
 
-coil_A_1_pin = 23
-coil_A_2_pin = 24
-coil_B_1_pin = 4
-coil_B_2_pin = 17
+coil_A_1_pin = 26
+coil_A_2_pin = 19
+coil_B_1_pin = 13
+coil_B_2_pin = 6
 
 # Set pin states
 
@@ -71,3 +71,7 @@ def backward(i):
     setStep(1,0,1,0)
     time.sleep(delay)
     x = x + 1
+
+forward(50)
+
+backward(50)
