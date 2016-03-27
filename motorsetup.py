@@ -46,9 +46,9 @@ def setStep(w1, w2, w3, w4):
 
 # loop through step sequence based on number of steps
 
-def forward(i):
-  i = 0
-  while (i < 50):
+def motorforward(i):
+  a = 0
+  while (a < i):
     setStep(1,0,1,0)
     time.sleep(delay)
     setStep(0,1,1,0)
@@ -57,13 +57,13 @@ def forward(i):
     time.sleep(delay)
     setStep(1,0,0,1)
     time.sleep(delay)
-    i = i + 1
+    a = a + 1
 
 # Reverse previous step sequence to reverse motor direction
 
-def backward(i):
-  i = 0
-  while (i < 50):
+def motorbackward(i):
+  a = 0
+  while (a < i):
     setStep(1,0,0,1)
     time.sleep(delay)
     setStep(0,1,0,1)
@@ -72,8 +72,6 @@ def backward(i):
     time.sleep(delay)
     setStep(1,0,1,0)
     time.sleep(delay)
-    i = i + 1
+    a = a + 1
 
-forward(50)
 
-backward(50)
