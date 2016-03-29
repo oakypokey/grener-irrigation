@@ -15,7 +15,7 @@ while True:
    elif soilOne < target and motorsetup.motorpos == 50:
       time.sleep(10)
    elif soilOne > target and motorsetup.motorpos == 50:
-      motorsetup.motorbackward(5)
+      motorsetup.motorbackward(50)
    elif soilOne > target and motorsetup.motorpos == 0:
       time.sleep(10)
    elif soilOne == target and motorsetup.motorpos in (0,50):
