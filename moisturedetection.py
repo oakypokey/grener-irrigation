@@ -3,18 +3,19 @@ import time
 import os
 import motorsetup
 
-motorsetup.motorpos
-target = 500
+target = 700
 
 # Main loop - read raw data and display
 while True:
    soilOne = mcp3008.readadc(0)
+   print soilOne
+   print motorsetup.motorpos
    if soilOne < target and motorsetup.motorpos == 0:
-      motorsetup.forward(50)
+      motorsetup.motorforward(50)
    elif soilOne < target and motorsetup.motorpos == 50:
       time.sleep(10)
    elif soilOne > target and motorsetup.motorpos == 50:
-      motorsetup.backward(5)
+      motorsetup.motorbackward(5)
    elif soilOne > target and motorsetup.motorpos == 0:
       time.sleep(10)
    elif soilOne == target and motorsetup.motorpos in (0,50):
