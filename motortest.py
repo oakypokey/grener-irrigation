@@ -1,4 +1,5 @@
 import motorsetup
+import time
 
 motorsetup.motorforward(50)
 time.sleep(10)
