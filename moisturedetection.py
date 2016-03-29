@@ -4,6 +4,7 @@ import os
 import motorsetup
 
 motorsetup.motorpos = motorpos
+target = 500
 
 # Main loop - read raw data and display
 while True:
@@ -16,7 +17,7 @@ while True:
       motorsetup.backward(5)
    elif soilOne > target and motorpos == 0:
       time.sleep(10)
-   elif soilOne = target and motorpos in (0,50):
+   elif soilOne == target and motorpos in (0,50):
       time.sleep(10)
    else:
       break
