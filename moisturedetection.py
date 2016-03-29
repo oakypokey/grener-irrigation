@@ -1,4 +1,4 @@
-import spidev
+import mcp3008
 import time
 import os
 import motorsetup
