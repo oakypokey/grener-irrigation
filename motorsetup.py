@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 # Variables
-
+motorpos = 0
 delay = 0.0055
 steps = 500
 x = 0
@@ -48,6 +48,9 @@ def setStep(w1, w2, w3, w4):
 
 def motorforward(i):
   a = 0
+  global motorpos
+  motorpos = motorpos + i
+  return motorpos
   while (a < i):
     setStep(1,0,1,0)
     time.sleep(delay)
@@ -63,6 +66,9 @@ def motorforward(i):
 
 def motorbackward(i):
   a = 0
+  global motorpos
+  motorpos = motorpos - i
+  return motorpos
   while (a < i):
     setStep(1,0,0,1)
     time.sleep(delay)
