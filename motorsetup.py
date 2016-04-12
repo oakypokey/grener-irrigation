@@ -7,20 +7,20 @@ delay = 0.0055
 steps = 500
 x = 0
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
 # Enable GPIO pins for  ENA and ENB for stepper
 
-enable_a = 18
-enable_b = 22
+enable_a = 38
+enable_b = 40
 
 # Enable pins for IN1-4 to control step sequence
 
-coil_A_1_pin = 26
-coil_A_2_pin = 19
-coil_B_1_pin = 13
-coil_B_2_pin = 6
+coil_A_1_pin = 37
+coil_A_2_pin = 35
+coil_B_1_pin = 33
+coil_B_2_pin = 31
 
 # Set pin states
 
