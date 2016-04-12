@@ -3,7 +3,7 @@ import time
 import os
 import motorsetup
 
-target = 700
+target = 1.900000000000
 
 # Main loop - read raw data and display
 while True:
