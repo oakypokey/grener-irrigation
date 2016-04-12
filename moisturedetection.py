@@ -7,7 +7,7 @@ target = 700
 
 # Main loop - read raw data and display
 while True:
-   soilOne = mcp3208.readanalogue(0)
+   soilOne = mcp3208.readanalog(0)
    print soilOne
    print motorsetup.motorpos
    if soilOne < target and motorsetup.motorpos == 0:
